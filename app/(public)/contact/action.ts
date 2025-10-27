@@ -15,7 +15,7 @@ export async function submitContact(values: {
 
     // SEND CONTACT EMAIL
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "kbablu.com",
       to: "7kbablu@gmail.com",
       subject: `📩 New Contact Form Submission from ${values.name}`,
       html: `
@@ -29,24 +29,32 @@ export async function submitContact(values: {
       </tr>
       <tr>
         <td style="padding: 15px 20px; border-top: 1px solid #e5e7eb;">
-          <p style="margin: 0; font-size: 14px;"><strong>Name:</strong> ${values.name}</p>
+          <p style="margin: 0; font-size: 14px;"><strong>Name:</strong> ${
+            values.name
+          }</p>
         </td>
       </tr>
       <tr>
         <td style="padding: 15px 20px; border-top: 1px solid #e5e7eb;">
-          <p style="margin: 0; font-size: 14px;"><strong>Email:</strong> ${values.email}</p>
+          <p style="margin: 0; font-size: 14px;"><strong>Email:</strong> ${
+            values.email
+          }</p>
         </td>
       </tr>
       <tr>
         <td style="padding: 15px 20px; border-top: 1px solid #e5e7eb;">
           <p style="margin: 0; font-size: 14px;"><strong>Phone:</strong></p>
-          <p style="margin: 10px 0; font-size: 14px; line-height: 1.5; color: #374151;">${values.phone || "NOT PROVIDED"}</p>
+          <p style="margin: 10px 0; font-size: 14px; line-height: 1.5; color: #374151;">${
+            values.phone || "NOT PROVIDED"
+          }</p>
         </td>
       </tr>
       <tr>
         <td style="padding: 15px 20px; border-top: 1px solid #e5e7eb;">
           <p style="margin: 0; font-size: 14px;"><strong>Message:</strong></p>
-          <p style="margin: 10px 0; font-size: 14px; line-height: 1.5; color: #374151;">${values.message}</p>
+          <p style="margin: 10px 0; font-size: 14px; line-height: 1.5; color: #374151;">${
+            values.message
+          }</p>
         </td>
       </tr>
       <tr>

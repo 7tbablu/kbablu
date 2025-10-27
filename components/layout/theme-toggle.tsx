@@ -1,48 +1,39 @@
 "use client";
 
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import * as React from "react";
 import { Moon, Sun } from "lucide-react";
-import { cn } from "@/lib/utils"; // adjust the import if your cn is elsewhere
-import { Button } from "../ui/button";
+import { useTheme } from "next-themes";
 
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export function ModeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const currentTheme = mounted ? theme : "light";
-
-  const toggleTheme = () => {
-    setTheme(currentTheme === "dark" ? "light" : "dark");
-  };
+  const { setTheme } = useTheme();
 
   return (
-    <Button
-      variant="ghost"
-      size="sm"
-      onClick={toggleTheme}
-      className="relative w-10 hidden md:flex"
-      aria-label="Toggle theme"
-    >
-      <Sun
-        className={cn(
-          "absolute h-5 w-5 transition-all",
-          currentTheme !== "light" && "scale-0 -rotate-90",
-          currentTheme === "light" && "scale-100 rotate-0"
-        )}
-      />
-      <Moon
-        className={cn(
-          "absolute h-5 w-5 transition-all",
-          currentTheme === "dark" && "scale-100 rotate-0",
-          currentTheme !== "dark" && "scale-0 rotate-90"
-        )}
-      />
-    </Button>
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <button className="bg-transparent size-8 flex items-center justify-center hover:cursor-pointer hover:bg-foreground/5 transition-colors duration-200 rounded-sm text-foreground/70">
+          <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all dark:scale-100 dark:rotate-0" />
+          <span className="sr-only">Toggle theme</span>
+        </button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem onClick={() => setTheme("light")}>
+          Light
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("dark")}>
+          Dark
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => setTheme("system")}>
+          System
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

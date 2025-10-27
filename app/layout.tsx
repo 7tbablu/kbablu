@@ -4,10 +4,10 @@ import "./globals.css";
 
 import { ModalProvider } from "@/components/ui/animated-modal";
 import Footer from "@/components/layout/footer";
-import { ThemeProvider } from "@/providers/theme-provider";
 import { ClerkLoaded, ClerkLoading, ClerkProvider } from "@clerk/nextjs";
 import { Navbar } from "@/components/layout/navbar";
 import { FaSpinner } from "react-icons/fa6";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const dn_Sans = DM_Sans({
   variable: "--font-geist-sans",
@@ -30,13 +30,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${dn_Sans.className}  antialiased`}>
-        <ClerkProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ClerkProvider>
             <ClerkLoading>
               <div className="w-full min-h-screen flex items-center justify-center">
                 <div>
@@ -54,8 +54,8 @@ export default function RootLayout({
                 {children} {modal} <Footer />
               </ModalProvider>
             </ClerkLoaded>
-          </ThemeProvider>
-        </ClerkProvider>
+          </ClerkProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

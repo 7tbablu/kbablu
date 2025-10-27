@@ -27,8 +27,17 @@ export default clerkMiddleware(async (auth, req) => {
 
   // 2️⃣ Require sign-in for protected routes
   if (isProtectedRoute(req)) {
+    let callbackUrl = url.pathname;
+    if (url.search) {
+      callbackUrl += url.search;
+    }
+
+    const encodedCallbackUrl = encodeURIComponent(callbackUrl);
+
     if (!userId) {
-      return NextResponse.redirect(new URL("/sign-in", req.url));
+      return NextResponse.redirect(
+        new URL(`/sign-in?callbackUrl=${encodedCallbackUrl}`, req.url)
+      );
     }
     return NextResponse.next();
   }

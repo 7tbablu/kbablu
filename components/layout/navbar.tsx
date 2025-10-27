@@ -4,7 +4,6 @@ import React, { useState, useEffect } from "react";
 import { motion, useScroll } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Github } from "lucide-react";
-import { Button } from "../ui/button";
 import { Logo } from "./logo";
 import { NavLinks } from "./nav-links";
 import { ModeToggle } from "./theme-toggle";
@@ -47,9 +46,9 @@ export const Navbar = () => {
         {/* Right Side  */}
         <div className="flex items-center gap-2.5 text-lg">
           <ModeToggle />
-          <Button variant="ghost" size="sm" className="hidden md:flex">
-            <Github />
-          </Button>
+          <button className="hidden md:flex bg-transparent size-8 items-center justify-center hover:cursor-pointer hover:bg-foreground/5 transition-colors duration-200 rounded-sm text-foreground/70 text-sm">
+            <Github className="size-5"/>
+          </button>
           <AuthButton />
         </div>
       </div>
