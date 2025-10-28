@@ -15,7 +15,7 @@ export async function submitContact(values: {
 
     // SEND CONTACT EMAIL
     await resend.emails.send({
-      from: "kbablu.com",
+      from: "Contact <noreply@kbablu.com>",
       to: "7kbablu@gmail.com",
       subject: `📩 New Contact Form Submission from ${values.name}`,
       html: `

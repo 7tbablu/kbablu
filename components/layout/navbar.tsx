@@ -27,7 +27,7 @@ export const Navbar = () => {
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
       className={cn(
-        "h-12 xl:h-14 w-full flex items-center top-0 z-50 fixed left-0 border-b lg:border-transparent px-4 lg:px-4 xl:px-0 overflow-hidden border shadow-sm lg:shadow-none",
+        "h-12 xl:h-14 w-full flex items-center top-0 z-50 fixed left-0 px-4 lg:px-4 xl:px-0 overflow-hidden",
         hasScrolled && "border-accent backdrop-blur-3xl"
       )}
     >
@@ -35,9 +35,9 @@ export const Navbar = () => {
         {/* Left Side  */}
         <div className="flex items-center gap-2 md:gap-3">
           {/* MOBILE NAV */}
-          <div className="flex items-center justify-center pt-1 lg:hidden">
+         
             <MobileNav />
-          </div>
+        
           {/* Logo  */}
           <Logo />
           {/* Nav Links  */}

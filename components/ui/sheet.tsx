@@ -55,7 +55,7 @@ function SheetContent({
   return (
     <SheetPortal>
       <SheetOverlay>
-        <SheetPrimitive.Close className="absolute left-[300px] sm:left-[400px] top-3 cursor-pointer">
+        <SheetPrimitive.Close className="absolute right-4 z-50 top-3 cursor-pointer">
           <XIcon className="size-7 text-background" />
           <span className="sr-only">Close</span>
         </SheetPrimitive.Close>
