@@ -10,10 +10,10 @@ export const metadata = {
 
 export default function SupportPage() {
   return (
-    <main className="container mx-auto px-4 text-neutral-800 dark:text-neutral-200">
+    <main className="container mx-auto px-2 text-neutral-800 dark:text-neutral-200">
       <h1 className="text-3xl font-bold mb-6">Support</h1>
       <p className="mb-6">
-        At <span className="font-semibold">kbablu.com</span>, your satisfaction
+        At <span className="font-semibold">Kbablu</span>, your satisfaction
         is my top priority. If you need help with a project, have questions
         about my services, or encounter issues with the website, this page will
         guide you on how to get support.
@@ -27,10 +27,10 @@ export default function SupportPage() {
         </p>
         <p className="mb-4">
           <a
-            href="mailto:hello@kbablu.com"
+            href="mailto:contact@kbablu.com"
             className="text-blue-600 dark:text-blue-400 underline"
           >
-            hello@kbablu.com
+            contact@kbablu.com
           </a>
         </p>
         <p>

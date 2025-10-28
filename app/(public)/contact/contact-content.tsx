@@ -9,7 +9,7 @@ export default function ContactContent() {
   return (
     <main
       className={cn(
-        "min-h-screen w-full flex flex-col items-center justify-center bg-gradient-to-br from-transparent via-[#f5edfc] to-transparent dark:from-transparent dark:via-[#10011f] dark:to-transparent px-4 relative"
+        "w-full flex flex-col items-center justify-center px-2 relative"
       )}
     >
       <div className="container mx-auto w-full">

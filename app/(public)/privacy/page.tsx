@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function PrivacyPage() {
   return (
-    <main className="container mx-auto px-4 text-neutral-800 dark:text-neutral-200">
+    <main className="container mx-auto px-2 text-neutral-800 dark:text-neutral-200">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
       <p className="mb-4">
-        At <span className="font-semibold">kbablu.com</span>, I am committed to
+        At <span className="font-semibold">Kbablu</span>, I am committed to
         protecting your privacy. This Privacy Policy explains how I collect,
         use, and safeguard your personal information when you use my website and
         services.
@@ -83,10 +83,10 @@ export default function PrivacyPage() {
       <p className="mb-4">
         For any questions regarding this Privacy Policy, you can contact me at{" "}
         <a
-          href="mailto:hello@kbablu.com"
+          href="mailto:contact@kbablu.com"
           className="text-blue-600 dark:text-blue-400 underline"
         >
-          hello@kbablu.com
+          contact@kbablu.com
         </a>
         .
       </p>

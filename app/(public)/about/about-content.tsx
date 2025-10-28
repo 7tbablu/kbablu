@@ -7,9 +7,9 @@ import Image from "next/image";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground space-y-24 px-2">
       {/* --- Intro Section --- */}
-      <section className="container mx-auto px-6 py-20 mt-16 md:mt-24">
+      <section className="container mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-10">
           {/* --- Profile Image --- */}
           <motion.div
@@ -37,9 +37,9 @@ export default function AboutPage() {
             className="max-w-xl text-center md:text-left"
           >
             <h1 className="text-3xl md:text-4xl font-bold mb-4">
-              About <span className="text-cyan-500">Me</span>
+              About Me
             </h1>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-foreground/70 leading-relaxed">
               I’m{" "}
               <span className="font-semibold text-cyan-500">Bablu Kumar</span> —
               a full-stack{" "}
@@ -50,7 +50,7 @@ export default function AboutPage() {
               <span className="font-semibold">development</span>, building
               products that not only work well but also feel great to use.
             </p>
-            <p className="text-muted-foreground leading-relaxed mt-3">
+            <p className="text-foreground/70 leading-relaxed mt-3">
               Over the years, I’ve built everything from personal projects to
               full-fledged apps using technologies like{" "}
               <span className="font-semibold">
@@ -67,8 +67,8 @@ export default function AboutPage() {
       </section>
 
       {/* --- My Philosophy / Skills --- */}
-      <section className="bg-muted/30 py-16">
-        <div className="container mx-auto px-6 grid gap-10 md:grid-cols-2 items-center">
+      <section className="py-16">
+        <div className="container mx-auto grid gap-10 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -78,12 +78,12 @@ export default function AboutPage() {
             <h2 className="text-2xl md:text-3xl font-semibold mb-4">
               My Approach
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-4">
+            <p className="text-foreground/70 leading-relaxed mb-4">
               I believe great software is built with empathy — understanding
               both user needs and technical depth. My goal is to create web
               experiences that are clean, performant, and future-ready.
             </p>
-            <p className="text-muted-foreground leading-relaxed">
+            <p className="text-foreground/70 leading-relaxed">
               Whether it’s a startup idea, a portfolio project, or a SaaS
               product, I approach each build with precision and a focus on{" "}
               <span className="font-semibold">design consistency</span>,
@@ -124,13 +124,13 @@ export default function AboutPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="p-5 rounded-xl bg-background shadow-sm border flex flex-col items-start gap-3 hover:shadow-md transition-all"
+                className="p-5 rounded-xl shadow-sm border flex flex-col items-start gap-3 hover:shadow-md transition-all"
               >
                 <div className="p-2 rounded-md bg-cyan-500/10 text-cyan-500">
                   {item.icon}
                 </div>
                 <h3 className="font-semibold">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.text}</p>
+                <p className="text-sm text-foreground/70">{item.text}</p>
               </div>
             ))}
           </motion.div>
@@ -138,7 +138,7 @@ export default function AboutPage() {
       </section>
 
       {/* --- Blogs & Projects --- */}
-      <section className="container mx-auto px-6 py-20 text-center">
+      <section className="container mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -149,8 +149,8 @@ export default function AboutPage() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Sharing What I Learn
           </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            <span className="font-semibold text-cyan-500">kbablu.com</span>{" "}
+          <p className="text-foreground/70 leading-relaxed">
+            <span className="font-semibold text-cyan-500">Kbablu</span>{" "}
             isn’t just my portfolio — it’s where I share ideas, experiments, and
             learnings through{" "}
             <span className="font-semibold">
@@ -159,7 +159,7 @@ export default function AboutPage() {
             . Everything I build here comes from real-world experience — things
             I struggled with, solved, and refined over time.
           </p>
-          <p className="text-muted-foreground leading-relaxed mt-3">
+          <p className="text-foreground/70 leading-relaxed mt-3">
             My goal is simple: help others learn, save time, and build better
             web apps — while continuously pushing myself to evolve as a
             developer.
@@ -168,7 +168,7 @@ export default function AboutPage() {
       </section>
 
       {/* --- Closing Note --- */}
-      <section className="bg-muted/20 py-16 text-center">
+      <section className="text-center">
         <motion.h2
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -178,7 +178,7 @@ export default function AboutPage() {
         >
           Always Building. Always Learning.
         </motion.h2>
-        <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className="text-foreground/70 max-w-2xl mx-auto leading-relaxed">
           Every project I make is a step forward — an opportunity to create,
           share, and connect through code. Thanks for being here, exploring my
           work, and being part of this journey toward better web experiences.

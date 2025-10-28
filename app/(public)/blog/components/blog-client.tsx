@@ -71,7 +71,7 @@ export default function BlogClient() {
   const handleNext = () => setCurrentPage((p) => Math.min(p + 1, totalPages));
 
   return (
-    <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="container mx-auto px-2 sm:px-4 lg:px-8">
       <SearchModal
         open={searchOpen}
         onClose={() => setSearchOpen(false)}
@@ -113,7 +113,7 @@ export default function BlogClient() {
           </div>
 
           {/* Category Chips */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-4 sticky top-14 z-10 py-4 bg-background">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-4 sticky top-12 xl:top-14 z-10 py-4 bg-background">
             {loading ? (
               <CategorySkeleton />
             ) : (
@@ -129,7 +129,7 @@ export default function BlogClient() {
           </div>
 
           {/* Blog Grid */}
-          <div className="grid gap-8 sm:gap-10 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-4 md:gap-8 xl:gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {loading
               ? Array.from({ length: 8 }).map((_, i) => (
                   <BlogCardSkeleton key={i} />

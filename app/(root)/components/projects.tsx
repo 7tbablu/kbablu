@@ -25,10 +25,7 @@ export function Projects() {
       {/* --- Projects Grid (Top 3 with CometCard) --- */}
       <div className="max-w-7xl mx-auto px-6 grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {projectOverviewData.slice(0, 3).map((project, index) => (
-          <div
-            key={index}
-            className="bg-gray-400/10 dark:bg-gray-900/40 rounded-2xl p-6 shadow hover:shadow-md shadow-cyan-100 dark:shadow-cyan-950 transition-shadow flex flex-col space-y-3.5"
-          >
+          <div key={index} className="gradient-content-card">
             <h2 className="text-2xl font-semibold text-cyan-500">
               {project.title}
             </h2>

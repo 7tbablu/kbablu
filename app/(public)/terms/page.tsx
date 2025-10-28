@@ -8,10 +8,10 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="container mx-auto px-4 text-neutral-800 dark:text-neutral-200">
+    <main className="container mx-auto px-2 text-neutral-800 dark:text-neutral-200">
       <h1 className="text-3xl font-bold mb-6">Terms and Conditions</h1>
       <p className="mb-4">
-        Welcome to <span className="font-semibold">kbablu.com</span>. These
+        Welcome to <span className="font-semibold">Kbablu</span>. These
         Terms and Conditions (&quot;Terms&quot;) govern your use of my website
         and services. By accessing or using my platform, you agree to comply
         with these Terms. If you do not agree, please do not use the services.
@@ -38,7 +38,7 @@ export default function TermsPage() {
       </h2>
       <p className="mb-4">
         All content, graphics, logos, code, and materials on{" "}
-        <span className="font-semibold">kbablu.com</span> are my intellectual
+        <span className="font-semibold">Kbablu</span> are my intellectual
         property unless otherwise specified. You may not copy, reproduce, or
         distribute any content without prior written consent.
       </p>
@@ -84,10 +84,10 @@ export default function TermsPage() {
       <p className="mt-8">
         For any questions regarding these Terms, you can contact me at{" "}
         <a
-          href="mailto:hello@kbablu.com"
+          href="mailto:contact@kbablu.com"
           className="text-blue-600 dark:text-blue-400 underline"
         >
-          hello@kbablu.com
+          contact@kbablu.com
         </a>
         .
       </p>

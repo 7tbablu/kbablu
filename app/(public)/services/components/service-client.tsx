@@ -40,9 +40,9 @@ export default function ServicesClient() {
   ];
 
   return (
-    <main className="container mx-auto px-6">
+    <main className="container mx-auto px-2 space-y-24">
       {/* Hero Section */}
-      <section className="text-center mb-16">
+      <section className="text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function ServicesClient() {
       </section>
 
       {/* Services Grid */}
-      <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
+      <section className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
         {services.map((service, i) => (
           <motion.div
             key={i}
@@ -77,10 +77,7 @@ export default function ServicesClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: i * 0.15 }}
-            className="p-6 rounded-2xl shadow-lg transform transition-all duration-300 flex flex-col gap-4
-              bg-gradient-to-tr from-indigo-700/5 via-purple-300/5 to-indigo-600/5 
-              dark:from-indigo-800/20 dark:via-purple-900/10 dark:to-purple-700/20
-              hover:scale-105"
+            className="gradient-content-card"
           >
             <div className="p-3 rounded-md bg-gray-100/90 dark:bg-white/5 text-purple-600 dark:text-purple-400 inline-block w-max">
               {service.icon}
@@ -94,7 +91,7 @@ export default function ServicesClient() {
       </section>
 
       {/* Technologies & Stack */}
-      <section className="mb-16">
+      <section>
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

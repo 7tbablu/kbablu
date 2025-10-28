@@ -42,7 +42,7 @@ export default function ProjectsClient() {
   };
 
   return (
-    <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="container mx-auto px-2 sm:px-6 lg:px-8">
       <div className="mb-12 text-center">
         <h1 className="text-4xl font-bold">Projects</h1>
         <p className="text-foreground/80 max-w-2xl mx-auto mt-2">
@@ -71,10 +71,7 @@ export default function ProjectsClient() {
       {/* Projects Grid */}
       <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {visibleProjects.map((project, idx) => (
-          <div
-            key={idx}
-            className="bg-gray-400/10 dark:bg-gray-900/40 rounded-2xl p-6 shadow hover:shadow-md shadow-cyan-100 dark:shadow-cyan-950 transition-shadow flex flex-col space-y-3.5"
-          >
+          <div key={idx} className="gradient-content-card">
             <h2 className="text-2xl font-semibold text-cyan-500">
               {project.title}
             </h2>
