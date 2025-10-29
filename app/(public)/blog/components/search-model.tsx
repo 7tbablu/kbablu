@@ -1,9 +1,9 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react'
-import { Post } from '../type';
-import { AnimatePresence, motion } from 'motion/react';
-import { Search } from 'lucide-react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { Post } from "../type";
+import { AnimatePresence, motion } from "motion/react";
+import { Search } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 export const SearchModal = ({
   open,
@@ -82,23 +82,27 @@ export const SearchModal = ({
                 results.map((p) => (
                   <Link
                     key={p.id}
-                    href={p.slug}
-                    className="block p-3 rounded-md hover:bg-neutral-100 dark:hover:bg-neutral-800 transition"
+                    href={`/blog/${p.slug}`}
+                    className="block p-3 rounded-md hover:bg-foreground/5 transition"
                   >
-                    <div className="flex items-center gap-3 w-16 h-10 relative">
-                      <Image
-                        src={p.image || ""}
-                        alt={p.title}
-                        fill
-                        sizes='100%'
-                        className="w-full h-full object-cover rounded-md"
-                      />
-                      <div>
-                        <div className="font-medium">{p.title}</div>
+                    <div className="flex items-center gap-3">
+                      <div className="w-16 h-10 relative">
+                        <Image
+                          src={p.image || ""}
+                          alt={p.title}
+                          fill
+                          sizes="100%"
+                          className="w-full h-full object-cover rounded-md"
+                        />
+                      </div>
+                      <div className="min-w-0">
+                        {" "}
+                        {/* 👈 Important: enables truncate inside flex */}
+                        <div className="font-medium truncate max-w-full">
+                          {p.title}
+                        </div>
                         <div className="text-sm text-muted-foreground">
                           {p.tags.join(", ")}
-                          {/* •{" "} */}
-                          {/* {new Date(p.date).toLocale?DateString()} */}
                         </div>
                       </div>
                     </div>
@@ -112,6 +116,3 @@ export const SearchModal = ({
     </AnimatePresence>
   );
 };
-
-
-
